@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+    <div id="products-page" class="page">
+        <h1 class="title">Products</h1>
+
+        <div id="products-section">
+            <% products?.forEach(product=> { %>
+                <div class="product-wrapper">
+                    <div class="product">
+
+                        <h2 class="subtitle">
+                            <%= product.title %>
+                        </h2>
+                        <p class="p-text">
+                            <%= product.description %>
+                        </p>
+                        <img class="product-img" src="<%=product.imageUrl %>" alt="product image">
+
+                        <div class="product-links">
+                            <a href="<%= product.aliExpressUrl %>">
+                                <img src="./images/aliexpress.png" />
+                            </a>
+                            <a href="<%= product.tikTokUrl %>">
+                                <img src="./images/tiktok.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <% }); %>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <%- include('partials/footer') %>

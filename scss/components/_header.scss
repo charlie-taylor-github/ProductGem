@@ -1,0 +1,31 @@
+.header {
+  padding: 0.5%;
+  border-bottom: 0.1px solid rgb(76, 76, 76);
+
+  .brand-name {
+    font-weight: 600;
+    color: $primary-color;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+  }
+
+  .nav-item {
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .nav-link {
+    color: $primary-color;
+  }
+
+  button {
+    background-color: inherit;
+    border: none;
+  }
+}

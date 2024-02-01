@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+    <div id="sign-up-page" class="page">
+        <div id="sign-in-section">
+            <h2 class="subtitle">Already have an account?</h2>
+            <div class="button-wrapper">
+                <a href="/sign-in">
+                    <button class="button">Sign In</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="sign-up-section">
+            <form method="POST" action="/sign-up">
+                <input type="text" name="username" placeholder="enter username..." required>
+                <input type="text" name="email" placeholder="enter email..." required>
+                <input type="password" name="password" placeholder="enter password..." id="password-input" required>
+
+                <div class="button-wrapper">
+                    <button type="submit" class="button">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('partials/footer') %>

@@ -1,0 +1,69 @@
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid $secondary-color;
+  padding: 1%;
+
+  flex-direction: column;
+
+  @media (min-width: $medium-screen-width) {
+    flex-direction: row;
+  }
+
+  #footer-brand {
+    flex: 1;
+    color: $primary-color;
+
+    font-size: 3vw;
+    margin-bottom: 3%;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 1.4vw;
+      margin-bottom: 0%;
+    }
+
+    .logo-hl {
+      color: $accent-color;
+    }
+
+    #version {
+      font-size: 3vw;
+
+      @media (min-width: $medium-screen-width) {
+        font-size: 0.75vw;
+      }
+    }
+  }
+
+  #footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    flex-direction: column;
+
+    @media (min-width: $medium-screen-width) {
+      flex-direction: row;
+    }
+  }
+
+  #copywright {
+    text-align: right;
+    flex: 1;
+  }
+
+  #copywright,
+  .footer-link {
+    color: $secondary-color;
+    font-size: 3vw;
+    margin-bottom: 3%;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 1vw;
+      margin-bottom: 0;
+    }
+  }
+}

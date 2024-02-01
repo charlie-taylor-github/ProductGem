@@ -1,0 +1,59 @@
+#tos-page {
+  .tos-section {
+    margin: 10% 0;
+
+    @media (min-width: $medium-screen-width) {
+      margin: 3% 0;
+    }
+
+    a {
+      color: $primary-color;
+    }
+  }
+
+  #close-account-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2%;
+      font-size: 4vw;
+
+      button {
+        color: $secondary-color;
+        border: none;
+        text-decoration: underline;
+        background-color: inherit;
+        width: fit-content;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 3vw;
+        }
+
+        @media (min-width: $large-screen-width) {
+          font-size: 1.3vw;
+        }
+      }
+    }
+
+    .p-text {
+      color: $secondary-color;
+      font-weight: 100;
+      font-size: 4vw;
+      text-align: center;
+
+      @media (min-width: $medium-screen-width) {
+        font-size: 3vw;
+      }
+
+      @media (min-width: $large-screen-width) {
+        font-size: 1.3vw;
+      }
+    }
+  }
+}

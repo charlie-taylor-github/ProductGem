@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+    <div id="sign-in-page" class="page">
+        <div id="sign-in-section">
+            <form method="POST" action="/sign-in">
+                <input type="text" name="username" placeholder="enter username..." required>
+                <input id="password-input" type="password" name="password" placeholder="enter password..." required>
+                <a href="/reset-password">
+                    <h3>forgot password?</h3>
+                </a>
+                <div class="button-wrapper">
+                    <button class="button" type="submit">Sign In</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="sign-up-section">
+            <h2 class="subtitle">Don't have an account?</h2>
+            <div class="button-wrapper">
+                <a href="/sign-up">
+                    <button class="button">Sign Up</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>

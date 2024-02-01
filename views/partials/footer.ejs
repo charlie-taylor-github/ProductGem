@@ -1,0 +1,73 @@
+</div>
+<%- include('./components/footer') %>
+
+    <script>
+        const error = document.getElementById('error').value;
+        const message = document.getElementById('message').value;
+
+        function setPopupText() {
+            const errorElement = document.getElementById('popup-error');
+            const messageElement = document.getElementById('popup-message');
+
+            const messages = {
+                INSUFFICIENT_DETAILS: "Please provide more details to proceed.",
+                INVALID_URL: "The URL entered is invalid. Please check and try again.",
+                SAVING_PRODUCT_ERROR: "We encountered an issue while saving the product. Please try again.",
+                FETCH_PRODUCTS_ERROR: "There was a problem fetching the products. Please refresh the page.",
+                PRODUCT_NOT_FOUND: "The requested product was not found.",
+                PASSWORD_HASH_ERROR: "An error occurred during password processing. Please retry.",
+                INVALID_USERNAME: "The username provided is invalid. Please use a different username.",
+                INVALID_EMAIL: "The email address entered is invalid. Please check and try again.",
+                USERNAME_EXISTS: "This username is already taken. Please choose a different one.",
+                EMAIL_EXISTS: "This email is already in use. Please use a different email.",
+                SAVING_USER_ERROR: "There was an issue saving user information. Please try again.",
+                INVALID_PASSWORD: "The password entered is incorrect. Please try again.",
+                USER_NOT_FOUND: "No user found with the provided information.",
+                DELETE_USER_ERROR: "An error occurred while trying to delete the user. Please try again.",
+                CREATE_TOKEN_ERROR: "There was an issue creating a token. Please try again.",
+                TOO_RECENT_SINCE_PREVIOUS_TOKEN: "Too soon since your last verification link. Please wait a few seconds before trying again.",
+                TOKEN_NOT_FOUND: "The requested token was not found.",
+                DELETE_TOKEN_ERROR: "There was an error deleting the token. Please try again.",
+                GCS_UPLOAD_ERROR: "An error occurred while uploading the image. Please retry.",
+                GCS_FETCH_IMAGE_ERROR: "Failed to retrieve the image.",
+                GCS_DELETE_IMAGE_ERROR: "There was a problem deleting the image.",
+                CUSTOMER_ID_ERROR: "There was an error with the customer ID. Please retry.",
+                RETRIEVE_SUBSCRIPTION_ERROR: "We encountered a problem retrieving subscription details.",
+                SUBSCRIPTION_VALIDATION_ERROR: "Subscription validation failed. Please check your details.",
+                STRIPE_REGISTRATION_ERROR: "There was an issue with Stripe registration. Please try again.",
+                STRIPE_CHECKOUT_ERROR: "An error occurred during Stripe checkout. Please retry.",
+                DELETE_SUBSCRIPTION_ERROR: "Failed to delete the subscription. Please try again.",
+                FETCHING_SUBSCRIPTIONS_ERROR: "There was an issue fetching subscriptions. Please try again.",
+                VERIFY_TOKEN_ERROR: "Token verification failed. Please check your token or try again.",
+                DB_ERROR: "A database error occurred. Please try again.",
+                SIGN_IN_ERROR: "There was an issue signing in. Please check your credentials and try again.",
+                EMAIL_REQUIRED: "An email address is required. Please provide one to continue.",
+                NO_USER_WITH_EMAIL: "No user found with that email. Please try a different email.",
+                CREATE_PRODUCT_ERROR: "There was an error creating the product. Please try again.",
+                EMAIL_SENT: "Email sent successfully. Please check your inbox.",
+                INVALID_PASSWORD_CHANGE: "The password change request is invalid. Please request a new one.",
+                INVALID_VERIFICATION_LINK: "The verification link is invalid or expired. Please request a new one.",
+                PASSWORD_RESET: "Your password has been reset successfully.",
+                FETCH_USER_ERROR: "There was an error fetching the user. Please try again.",
+            };
+
+            if (error && messages[error]) errorElement.innerText = messages[error];
+            if (message && messages[message]) messageElement.innerText = messages[message];
+        }
+
+        if (error || message) {
+            const popup = document.getElementById('popup');
+            popup.classList.add('active');
+            setPopupText();
+            setTimeout(() => {
+                popup.classList.remove('active');
+            }, 4 * 1000);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    </body>
+
+    </html>

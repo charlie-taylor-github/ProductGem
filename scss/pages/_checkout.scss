@@ -1,0 +1,86 @@
+#checkout-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  & > div {
+    flex: 1;
+  }
+
+  .title {
+    color: $accent-color;
+    font-size: 5vw;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 2.5vw;
+    }
+  }
+
+  #checkout-section {
+    .subtitle {
+      padding: 0;
+      color: $secondary-color;
+      font-weight: 100;
+      font-size: 4vw;
+
+      @media (min-width: $medium-screen-width) {
+        padding: 0 10%;
+        font-size: 2vw;
+      }
+    }
+
+    button {
+      margin-top: 3%;
+      font-size: 4vw;
+
+      @media (min-width: $medium-screen-width) {
+        font-size: 2vw;
+      }
+    }
+  }
+
+  #benefits-section {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $medium-screen-width) {
+      flex-direction: row;
+    }
+
+    .benefit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5%;
+      flex: 1;
+
+      img {
+        width: 50%;
+
+        @media (min-width: $medium-screen-width) {
+          width: 40%;
+        }
+      }
+
+      .subtitle {
+        margin-top: 10%;
+        font-size: 5vw;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 1.75vw;
+        }
+      }
+
+      .p-text {
+        font-size: 4vw;
+        margin-top: 3%;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 1.75vw;
+        }
+      }
+    }
+  }
+}

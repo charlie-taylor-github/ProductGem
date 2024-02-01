@@ -1,0 +1,142 @@
+#home-page {
+  #overview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 7%;
+
+    @media (min-width: $medium-screen-width) {
+      flex-direction: row;
+      text-align: left;
+      align-items: start;
+      margin-bottom: 3%;
+    }
+
+    #overview-section-text {
+      margin-bottom: 5%;
+
+      @media (min-width: $medium-screen-width) {
+        margin-bottom: 0;
+      }
+
+      .title {
+        font-size: 10vw;
+        margin-bottom: 4%;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 5vw;
+          margin-bottom: 4%;
+        }
+      }
+
+      .subtitle {
+        color: transparent;
+        -webkit-text-stroke: 1px $accent-color;
+        margin-bottom: 2%;
+        font-size: 5vw;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 2vw;
+        }
+      }
+
+      .p-text {
+        font-size: 4vw;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 2vw;
+        }
+      }
+    }
+
+    img {
+      width: 50%;
+      height: auto;
+
+      @media (min-width: $medium-screen-width) {
+        width: 20vw;
+        height: 20vw;
+      }
+    }
+  }
+
+  #benefits-section {
+    border-top: 1px solid $primary-color;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $medium-screen-width) {
+      flex-direction: row;
+    }
+
+    .benefit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5%;
+      flex: 1;
+
+      img {
+        width: 50%;
+
+        @media (min-width: $medium-screen-width) {
+          width: 40%;
+        }
+      }
+
+      .subtitle {
+        margin-top: 10%;
+        font-size: 5vw;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 1.75vw;
+        }
+      }
+
+      .p-text {
+        font-size: 4vw;
+        margin-top: 3%;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 1.75vw;
+        }
+      }
+    }
+  }
+
+  #call-to-action-section {
+    border-top: 1px solid $primary-color;
+    text-align: center;
+
+    .p-text {
+      margin-top: 7%;
+      font-size: 4vw;
+      font-weight: 500;
+
+      @media (min-width: $medium-screen-width) {
+        font-size: 2vw;
+      }
+    }
+
+    .subtitle {
+      color: $secondary-color;
+      margin-top: 15%;
+      margin-bottom: 15%;
+      font-size: 4vw;
+      font-weight: 500;
+
+      @media (min-width: $medium-screen-width) {
+        font-size: 2vw;
+        margin-top: 7%;
+        margin-bottom: 7%;
+      }
+
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}

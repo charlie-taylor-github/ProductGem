@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>ProductGem - Winning Products</title>
+    <meta name="description"
+        content="Discover winning products effortlessly with ProductGem – the ultimate research tool curated by top experts. Say goodbye to endless product research and say hello to ProductGem – your last tool for success!">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <input type="hidden" id="error" value="<%= typeof error !== 'undefined' ? error : '' %>">
+    <input type="hidden" id="message" value="<%= typeof message !== 'undefined' ? message : '' %>">
+
+    <%- include('./components/popup') %>
+
+        <%- include('./components/header') %>
+            <div id="main-content">

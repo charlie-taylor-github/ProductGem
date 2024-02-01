@@ -1,0 +1,184 @@
+#admin-page {
+  text-align: center;
+
+  .title {
+    text-align: center;
+    font-size: 10vw;
+    margin-bottom: 5%;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 5vw;
+      margin-bottom: 2%;
+    }
+
+    @media (min-width: $large-screen-width) {
+      font-size: 3vw;
+      margin-bottom: 2%;
+    }
+  }
+
+  & > .subtitle {
+    text-align: center;
+    color: $secondary-color;
+    margin-bottom: 5%;
+
+    font-size: 4vw;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 2vw;
+    }
+  }
+
+  #create-product-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+
+    input,
+    textarea {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 3px solid $secondary-color;
+
+      padding: 1%;
+      background-color: $background-color;
+      color: $primary-color;
+
+      margin-bottom: 8%;
+      font-size: 3.5vw;
+
+      @media (min-width: $medium-screen-width) {
+        font-size: 2vw;
+      }
+
+      @media (min-width: $large-screen-width) {
+        font-size: 1.5vw;
+      }
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  #products-section {
+    width: 100%;
+    overflow: visible;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1, 1fr));
+    grid-auto-rows: 90vw;
+
+    @media (min-width: $medium-screen-width) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 45vw;
+      padding: 0 7.5%;
+    }
+
+    @media (min-width: $large-screen-width) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 22vw;
+      padding: 0 15%;
+    }
+
+    .product-wrapper {
+      border: 3px solid white;
+      border-radius: 5%;
+      padding: 1% 1%;
+      margin: 3%;
+    }
+
+    .product {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+      padding: 5%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $primary-color;
+        border-radius: 30px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $secondary-color;
+        border-radius: 30px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .subtitle {
+        text-align: center;
+        font-size: 6vw;
+
+        @media (min-width: $medium-screen-width) {
+          font-size: 2.4vw;
+        }
+
+        @media (min-width: $large-screen-width) {
+          font-size: 1.5vw;
+        }
+      }
+
+      .p-text {
+        width: 100%;
+        text-align: center;
+        word-wrap: break-word;
+      }
+
+      .product-img {
+        max-width: 100%;
+        height: 30vw;
+
+        @media (min-width: $medium-screen-width) {
+          height: 15vw;
+        }
+
+        @media (min-width: $large-screen-width) {
+          height: 7vw;
+        }
+      }
+
+      .product-links {
+        margin-top: 10%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+          max-width: 10%;
+        }
+
+        img {
+          width: 100%;
+          border: 1px solid white;
+          background-color: white;
+          padding: 5%;
+          border-radius: 100%;
+        }
+      }
+
+      form {
+        margin-top: 10%;
+        button {
+          color: $primary-color;
+          background-color: inherit;
+          border: none;
+        }
+      }
+    }
+  }
+}

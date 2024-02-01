@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@import "utils/variables";
+
+@import "components/header";
+@import "components/footer";
+@import "components/popup";
+
+@import "pages/index";
+@import "pages/sign_in";
+@import "pages/sign_up";
+@import "pages/verify_email";
+@import "pages/checkout";
+@import "pages/reset_password";
+@import "pages/new_password";
+@import "pages/products";
+@import "pages/admin";
+@import "pages/terms_of_service";
+@import "pages/contact";
+@import "pages/refund";
+@import "pages/privacy";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $primary-color;
+  background-color: $background-color;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-content {
+  flex: 1;
+}
+
+.page {
+  padding: 5% 15vw 10vw 15vw;
+
+  @media (min-width: $medium-screen-width) {
+    padding: 5% 5vw 10vw 5vw;
+  }
+}
+
+.button {
+  padding: 1% 5% 1% 5%;
+  font-size: 4vw;
+  background-color: $background-color;
+  border: 3px solid $accent-color;
+  color: $accent-color;
+  border-radius: 0.6vw;
+
+  @media (min-width: $medium-screen-width) {
+    font-size: 2.25vw;
+  }
+
+  @media (min-width: $large-screen-width) {
+    font-size: 1.5vw;
+  }
+}

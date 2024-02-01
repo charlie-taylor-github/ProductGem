@@ -1,0 +1,82 @@
+<%- include('partials/header') %>
+
+    <div id="admin-page" class="page">
+        <h1 class="title">Dashboard</h1>
+
+        <h2 class="subtitle">
+            <%= subscriptions %> active subscriptions
+        </h2>
+
+        <div id="create-product-section">
+            <h3>Create a Product</h3>
+            <form method="post" action="/product/create" id="create-form" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="title" required>
+                <br>
+                <textarea name="description" placeholder="description" required></textarea>
+                <br>
+                <input type="url" name="aliExpressUrl" placeholder="Ali-Express URL" required>
+                <br>
+                <input type="url" name="tikTokUrl" placeholder="TikTok URL" required>
+                <br>
+                <input type="file" id="image-input" name="image" accept="image/*" id="imageInput" required>
+                <div class="button-wrapper">
+                    <button type="submit" class="button">create</button>
+                </div>
+            </form>
+        </div>
+
+        <h3>Active Products</h3>
+        <div id="products-section">
+            <% products?.forEach(product=> { %>
+                <div class="product-wrapper">
+                    <div class="product">
+
+                        <h2 class="subtitle">
+                            <%= product.title %>
+                        </h2>
+                        <p class="p-text">
+                            <%= product.description %>
+                        </p>
+                        <img class="product-img" src="<%=product.imageUrl %>" alt="product image">
+
+                        <div class="product-links">
+                            <a href="<%= product.aliExpressUrl %>">
+                                <img src="./images/aliexpress.png" />
+                            </a>
+                            <a href="<%= product.tikTokUrl %>">
+                                <img src="./images/tiktok.png" />
+                            </a>
+                        </div>
+
+                        <form action="/product/delete/<%= product._id %>" method="post">
+                            <button type="submit">delete</button>
+                        </form>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById("image-input");
+        const form = document.getElementById("create-form")
+
+        form.addEventListener("submit", e => {
+            const formData = new FormData(this);
+            formData.append("image", imageInput.files[0]);
+
+            fetch('/product/create', {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+    <%- include('partials/footer') %>

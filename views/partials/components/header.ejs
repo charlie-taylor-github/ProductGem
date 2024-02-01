@@ -1,0 +1,51 @@
+<div class="header">
+  <nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="/">
+        <h2 class="brand-name">
+          Product<span>Gem</span>
+        </h2>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav">
+
+          <% if (loggedIn) { %>
+
+            <li class="nav-item">
+              <h4><a class="nav-link" href="/products">Products</a></h4>
+            </li>
+
+            <li class="nav-item">
+              <form method="post" action="/sign-out">
+                <button type="submit">
+                  <h4><a class="nav-link">Sign Out</a></h4>
+                </button>
+              </form>
+
+            </li>
+
+            <% } else { %>
+              <li class="nav-item">
+                <h4><a class="nav-link" href="/sign-in">Sign In</a></h4>
+              </li>
+
+              <li class="nav-item">
+                <h4><a class="nav-link" href="/sign-up">Sign Up</a></h4>
+              </li>
+
+              <% } %>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</div>

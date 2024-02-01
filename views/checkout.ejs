@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+    <div id="checkout-page" class="page">
+
+        <h1 class="title">Get Access to ProductGem Now!</h1>
+
+        <div id="benefits-section">
+            <div class="benefit">
+                <img src="./images/handshake.png">
+                <h2 class="subtitle">Benefit 1</h2>
+                <p class="p-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris nisi, sollicitudin sit amet
+                    massa vel, efficitur euismod eros.
+                </p>
+            </div>
+            <div class="benefit">
+                <img src="./images/ecom_monitor.png">
+                <h2 class="subtitle">Benefit 2</h2>
+                <p class="p-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris nisi, sollicitudin sit amet
+                    massa vel, efficitur euismod eros.
+                </p>
+            </div>
+            <div class="benefit">
+                <img src="./images/network.png">
+                <h2 class="subtitle">Benefit 3</h2>
+                <p class="p-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris nisi, sollicitudin sit amet
+                    massa vel, efficitur euismod eros.
+                </p>
+            </div>
+        </div>
+
+        <div id="checkout-section">
+            <p class="subtitle">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris nisi, sollicitudin sit amet
+                massa vel, efficitur euismod eros."
+            </p>
+
+            <form method="post" action="/stripe/create-checkout-session">
+                <button type="submit" class="button">Subscribe</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,85 @@
+#verify-email-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 5vw 7vw 5vw 7vw;
+  border: 0.3vw solid $primary-color;
+  margin: 5vw 10vw 0 10vw;
+
+  @media (min-width: $medium-screen-width) {
+    padding: 5vw 5vw 5vw 5vw;
+    margin: 5vw 10vw 0 10vw;
+  }
+
+  @media (min-width: $large-screen-width) {
+    margin: 5vw 30vw 0 30vw;
+  }
+
+  .title {
+    font-size: 4vw;
+    margin-bottom: 5%;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 4vw;
+      margin-bottom: 2%;
+    }
+
+    @media (min-width: $large-screen-width) {
+      font-size: 1.75vw;
+    }
+  }
+
+  .subtitle {
+    color: $secondary-color;
+    font-weight: 100;
+    font-size: 4vw;
+    margin-bottom: 10%;
+
+    @media (min-width: $medium-screen-width) {
+      font-size: 3vw;
+      margin-bottom: 3%;
+    }
+
+    @media (min-width: $large-screen-width) {
+      font-size: 1.3vw;
+    }
+  }
+
+  #resend-section {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .subtitle {
+      font-weight: 300;
+      color: $primary-color;
+      margin: 0;
+      font-size: 4vw;
+
+      @media (min-width: $large-screen-width) {
+        font-size: 1.5vw;
+      }
+    }
+
+    button {
+      color: $accent-color;
+      font-weight: 300;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      margin-left: 10%;
+      border: none;
+      background-color: inherit;
+
+      font-size: 4vw;
+
+      @media (min-width: $large-screen-width) {
+        font-size: 1.5vw;
+      }
+    }
+  }
+}

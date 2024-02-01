@@ -1,0 +1,13 @@
+#privacy-page {
+  .privacy-section {
+    margin: 10% 0;
+
+    @media (min-width: $medium-screen-width) {
+      margin: 3% 0;
+    }
+
+    a {
+      color: $primary-color;
+    }
+  }
+}
